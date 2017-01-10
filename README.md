@@ -8,9 +8,16 @@ categorized by real-world systems that enact them.
 ### What is this?
 
 Engineering as a discipline is driven by a healthy balance between
-research and development. This project is an attempt to bolster
-appreciation for the former by shedding light on some of the academic
-and industrial research behind commonly-used softare systems.
+research and development. Within the realm of computer science and
+engineering, I think that there is too often a disconnect between the
+two halves of this equation. The research side is often accused of
+lacking context to the trials and tribulations of "real-world"
+developers. Conversely, developers largely take for granted the debt
+owed to the giants on whose shoulders they stand.
+
+Research In Production is an attempt to bolster appreciation for the
+research side of R&D by shedding light on some of the academic and
+industrial research behind commonly-used softare systems.
 
 Most non-trivial software systems* are powered by concepts and
 techniques that came into being after a group of people put a lot of
