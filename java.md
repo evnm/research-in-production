@@ -231,6 +231,46 @@ rounding modes specified by the IEEE-754 standard. They will also
 allow one to easily test libraries that are claimed to provide
 correctly rounded functions.
 
+### [Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches](http://www.cs.ucsb.edu/~urs/oocsb/papers/ecoop91.pdf)
+
+_Urs Hölzle, Craig Chambers and David Ungar_
+
+__Abstract.__ Polymorphic inline caches (PICs) provide a new way to
+reduce the overhead of polymorphic message sends by extending inline
+caches to include more than one cached lookup result per call
+site. For a set of typical object-oriented SELF programs, PICs achieve
+a median speedup of 11%.  As an important side effect, PICs collect
+type information by recording all of the receiver types actually used
+at a given call site. The compiler can exploit this type information
+to generate better code when recompiling a method. An experimental
+version of such a system achieves a median speedup of 27% for our set
+of SELF programs, reducing the number of non-inlined message sends by
+a factor of two.  Implementations of dynamically-typed object-oriented
+languages have been limited by the paucity of type information
+available to the compiler. The abundance of the type information
+provided by PICs suggests a new compilation approach for these
+languages, adaptive compilation. Such compilers may succeed in
+generating very efficient code for the time-critical parts of a
+program without incurring distracting compilation pauses.
+
+### [Optimizing Dynamically-Dispatched Calls with Run-Time Type Feedback](http://www.cs.ucsb.edu/~urs/oocsb/papers/pldi94.pdf)
+
+_Urs Hölzle, and David Ungar_
+
+__Abstract.__ Object-oriented programs are difficult to optimize
+because they execute many dynamically-dispatched calls. These calls
+cannot easily be eliminated because the compiler does not know which
+callee will be invoked at runtime. We have developed a simple
+technique that feeds back type information from the runtime system to
+the compiler. With this type feedback, the compiler can inline any
+dynamically-dispatched call. Our compiler drastically reduces the call
+frequency of a suite of large SELF applications (by a factor of 3.6)
+and improves performance by a factor of 1.7. We believe that type
+feedback could significantly reduce call frequencies and improve
+performance for most other object-oriented languages (statically-typed
+or not) as well as for languages with type-dependent operations such
+as generic arithmetic.
+
 ## Research produced
 
 ### [An optimistic approach to lock-free FIFO queues](http://people.csail.mit.edu/edya/publications/OptimisticFIFOQueue-journal.pdf)
@@ -307,3 +347,124 @@ outperform the Java SE 5.0 SynchronousQueue by factors of three in
 unfair mode and 14 in fair mode; this translates to factors of two and
 ten for the ThreadPoolExecutor. Our synchronous queues have been
 adopted for inclusion in Java 6.
+
+### [A Simple Graph-Based Intermediate Representation](http://www.oracle.com/technetwork/java/javase/tech/c2-ir95-150110.pdf)
+
+_Cliff Click, and Michael Paleczny_
+
+__Abstract.__ We present a graph-based intermediate representation
+(IR) with simple semantics and a low-memory-cost C++
+implementation. The IR uses a directed graph with la-
+beled vertices and ordered inputs but unordered outputs.
+Vertices are labeled with opcodes, edges are unlabeled.
+We represent the CFG and basic blocks with the same
+vertex and edge structures. Each opcode is defined by a
+C++ class that encapsulates opcode-specific data and be-
+havior. We use inheritance to abstract common opcode
+behavior, allowing new opcodes to be easily defined from
+old ones. The resulting IR is simple, fast and easy to use.
+
+### [Linear Scan Register Allocation on SSA Form](http://www.christianwimmer.at/Publications/Wimmer10a/Wimmer10a.pdf)
+
+_Christian Wimmer, and Michael Franz_
+
+__Abstract.__ The linear scan algorithm for register allocation provides a good
+register assignment with a low compilation overhead and is thus
+frequently used for just-in-time compilers. Although most of these
+compilers use static single assignment (SSA) form, the algorithm
+has not yet been applied on SSA form, i.e., SSA form is usually
+deconstructed before register allocation. However, the structural
+properties of SSA form can be used to simplify the algorithm.
+With only one definition per variable, lifetime intervals (the
+main data structure) can be constructed without data flow analy-
+sis. During allocation, some tests of interval intersection can be
+skipped because SSA form guarantees non-intersection. Finally,
+deconstruction of SSA form after register allocation can be inte-
+grated into the resolution phase of the register allocator without
+much additional code.
+We modified the linear scan register allocator of the Java
+HotSpot TM client compiler so that it operates on SSA form. The
+evaluation shows that our simpler and faster version generates
+equally good or slightly better machine code.
+
+### [Parallel Garbage Collection for Shared Memory Multiprocessors](http://people.csail.mit.edu/shanir/publications/dfsz2001.pdf)
+
+_Christine H. Flood, David Detlefs, Nir Shavit, and Xiolan Zhang_
+
+__Abstract.__ We present a multiprocessor “stop-the-world”
+garbage collection framework that provides multiple
+forms of load balancing. Our parallel collectors
+use this framework to balance the work of root scanning,
+using static overpartitioning, and also to balance
+the work of tracing the object graph, using a
+form of dynamic load balancing called work stealing.
+We describe two collectors written using this
+framework: pSemispaces, a parallel semispace collector,
+and pMarkcompact, a parallel markcompact
+collector.
+
+### [A Generational Mostly-concurrent Garbage Collector](http://www.cs.ucsb.edu/~ckrintz/racelab/gc/papers/detlefs-generational.pdf)
+
+_Tony Printezis, and David Detlefs_
+
+__Abstract.__ This paper reports our experiences with a
+mostly-concurrent incremental garbage collector, implemented in the
+context of a high performance virtual machine for the Java™
+programming language. The garbage collector is based on the “mostly
+parallel” collection algorithm of Boehm et al., and can be used as the
+old generation of a generational memory system. It overloads effi-
+cient write-barrier code already generated to support generational
+garbage collection to also identify objects that were modified during
+concurrent marking. These objects must be rescanned to ensure that the
+concurrent marking phase marks all live objects. This algorithm
+minimises maximum garbage collection pause times, while having only a
+small impact on the average garbage collection pause time and overall
+execution time. We support our claims with experimental results, for
+both a synthetic benchmark and real programs.
+
+### [Garbage-First Garbage Collection](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.63.6386&rep=rep1&type=pdf)
+
+_David Detlefs, Christine Flood, Steve Heller, and Tony Printezis_
+
+__Abstract.__ Garbage-First is a server-style garbage collector,
+targeted for multi-processors with large memories, that meets a soft
+real-time goal with high probability, while achieving high
+throughput. Whole-heap operations, such as global marking, are
+performed concurrently with mutation, to prevent interruptions
+proportional to heap or live-data size. Concurrent marking both
+provides collection ”completeness ” and identifies regions ripe for
+reclamation via compacting evacuation. This evacuation is performed in
+parallel on multiprocessors, to increase throughput.
+
+### [C4: The Continuously Concurrent Compacting Collector](http://www.azulsystems.com/sites/default/files/images/c4_paper_acm.pdf)
+
+_Gil Tene, Balaji Iyengar, and Michael Wolf_
+
+__Abstract.__ C4, the Continuously Concurrent Compacting Collector, an
+up- dated generational form of the Pauseless GC Algorithm, is in-
+troduced and described, along with details of its implementation on
+modern X86 hardware. It uses a read barrier to support concur- rent
+compaction, concurrent remapping, and concurrent incremen- tal update
+tracing. C4 differentiates itself from other generational garbage
+collectors by supporting simultaneous-generational con- currency: the
+different generations are collected using concurrent (non
+stop-the-world) mechanisms that can be simultaneously and
+independently active. C4 is able to continuously perform concur- rent
+young generation collections, even during long periods of con- current
+full heap collection, allowing C4 to sustain high allocation rates and
+maintain the efficiency typical to generational collectors, without
+sacrificing response times or reverting to stop-the-world
+operation. Azul systems has been shipping a commercial imple-
+mentation of the Pauseless GC mechanism, since 2005. Three suc-
+cessive generations of Azul’s Vega series systems relied on custom
+multi-core processors and a custom OS kernel to deliver both the scale
+and features needed to support Pauseless GC. In 2010, Azul released
+its first software-only commercial implementation of C4 for modern
+commodity X86 hardware, using Linux kernel enhance- ments to support
+the required feature set. We discuss implementa- tion details of C4 on
+X86, including the Linux virtual and physi- cal memory management
+enhancements that were used to support the high rate of virtual memory
+operations required for sustained pauseless operation. We discuss
+updates to the collector’s manage- ment of the heap for efficient
+generational collection and provide throughput and pause time data
+while running sustained workloads.
