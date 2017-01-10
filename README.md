@@ -59,10 +59,10 @@ production systems, then it warrants a spot in this project.
 Research In Production was seeded with content from existing lists put
 together by [Alex Denisov](https://github.com/AlexDenisov) and
 [Matt Warren](https://github.com/mattwarren/). I added
-[a list for a project that I used to work on](https://github.com/evnm/research-in-prod/blob/master/finagle.md)
+[a list for a project that I used to work on](https://github.com/evnm/research-in-production/blob/master/finagle.md)
 and I encourage you to do the same.
 
 ## Contributing
 
 See
-[CONTRIBUTING.md](https://github.com/evnm/research-in-prod/blob/master/CONTRIBUTING.md).
+[CONTRIBUTING.md](https://github.com/evnm/research-in-production/blob/master/CONTRIBUTING.md).
