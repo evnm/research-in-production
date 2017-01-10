@@ -13,7 +13,7 @@ engineering, I think that there is too often a disconnect between the
 two halves of this equation. The research side is often accused of
 lacking context to the trials and tribulations of "real-world"
 developers. Conversely, developers largely take for granted the debt
-owed to the giants on whose shoulders they stand.
+owed to the researchers upon whose work they rely.
 
 Research In Production is an attempt to bolster appreciation for the
 research side of R&D by shedding light on some of the academic and
