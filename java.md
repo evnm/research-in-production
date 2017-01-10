@@ -233,7 +233,7 @@ correctly rounded functions.
 
 ### [Optimizing Dynamically-Typed Object-Oriented Languages With Polymorphic Inline Caches](http://www.cs.ucsb.edu/~urs/oocsb/papers/ecoop91.pdf)
 
-_Urs Hölzle, Craig Chambers and David Ungar_
+_Urs Hölzle, Craig Chambers, and David Ungar_
 
 __Abstract.__ Polymorphic inline caches (PICs) provide a new way to
 reduce the overhead of polymorphic message sends by extending inline
@@ -255,7 +255,7 @@ program without incurring distracting compilation pauses.
 
 ### [Optimizing Dynamically-Dispatched Calls with Run-Time Type Feedback](http://www.cs.ucsb.edu/~urs/oocsb/papers/pldi94.pdf)
 
-_Urs Hölzle, and David Ungar_
+_Urs Hölzle and David Ungar_
 
 __Abstract.__ Object-oriented programs are difficult to optimize
 because they execute many dynamically-dispatched calls. These calls
@@ -350,7 +350,7 @@ adopted for inclusion in Java 6.
 
 ### [A Simple Graph-Based Intermediate Representation](http://www.oracle.com/technetwork/java/javase/tech/c2-ir95-150110.pdf)
 
-_Cliff Click, and Michael Paleczny_
+_Cliff Click and Michael Paleczny_
 
 __Abstract.__ We present a graph-based intermediate representation
 (IR) with simple semantics and a low-memory-cost C++
@@ -366,7 +366,7 @@ old ones. The resulting IR is simple, fast and easy to use.
 
 ### [Linear Scan Register Allocation on SSA Form](http://www.christianwimmer.at/Publications/Wimmer10a/Wimmer10a.pdf)
 
-_Christian Wimmer, and Michael Franz_
+_Christian Wimmer and Michael Franz_
 
 __Abstract.__ The linear scan algorithm for register allocation provides a good
 register assignment with a low compilation overhead and is thus
@@ -405,7 +405,7 @@ collector.
 
 ### [A Generational Mostly-concurrent Garbage Collector](http://www.cs.ucsb.edu/~ckrintz/racelab/gc/papers/detlefs-generational.pdf)
 
-_Tony Printezis, and David Detlefs_
+_Tony Printezis and David Detlefs_
 
 __Abstract.__ This paper reports our experiences with a
 mostly-concurrent incremental garbage collector, implemented in the
