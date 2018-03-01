@@ -2,7 +2,7 @@
 
 [Erlang](http://www.erlang.org/) is a programming language used to build massively scalable soft real-time systems with requirements on high availability. Erlang's runtime system has built-in support for concurrency, distribution, and fault tolerance.
 
-Erlang is complimented by OTP, a set of libraries and design principles providing middle-ware to develop these systems. OTP includes its own distributed database, applications to interface towards other languages, debugging and release handling tools.
+Erlang is complemented by OTP, a set of libraries and design principles providing middle-ware to develop these systems. OTP includes its own distributed database, applications to interface towards other languages, debugging and release handling tools.
 
 ## Research produced
 
